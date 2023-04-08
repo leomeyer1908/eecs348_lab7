@@ -1,0 +1,27 @@
+<html>
+
+<body>
+<h1>EECS 348 Lab Seven Practice Three</h1>
+<p>
+First Password: <input type="text" id="password1"> <br>
+Second Password: <input type="text" id="password2"> <br>
+</p>
+<button onclick="validatePassword()">Validate Your Passwords</button>
+<script>
+function validatePassword() {
+	var password1 = document.getElementById("password1").value;
+	var password2 = document.getElementById("password2").value;
+
+	if (password1 != password2) {
+	    alert("The passwords don't match");
+	} else if (password1.length < 8 || password2.length < 8) {
+	    alert("The password is less than 8 letters");
+	} else {
+	    alert("The passwords match");
+	}
+}
+</script>
+</body>
+
+
+</html>

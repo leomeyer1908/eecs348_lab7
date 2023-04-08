@@ -1,0 +1,37 @@
+<html>
+
+<body>
+<h1>EECS 348 Lab Seven Practice Two</h1>
+<p id="paragraph" style="border-style: solid; border-width: 5px">
+    This is some dummy text for the paragraph in the Practice Two Assignment.
+</p>
+<p>
+Border R(0-255): <input type="text" id="borderR"> <br>
+Border G(0-255): <input type="text" id="borderG"> <br>
+Border B(0-255): <input type="text" id="borderB"> <br>
+Border Width: <input type="text" id="borderWidth"> <br>
+Background R(0-255): <input type="text" id="backgroundR"> <br>
+Background G(0-255): <input type="text" id="backgroundG"> <br>
+Background B(0-255): <input type="text" id="backgroundB"> <br>
+</p>
+<button onclick="changeParagraph()">Change paragraph!</button>
+
+
+<script>
+function changeParagraph() {
+	let paragraph = document.getElementById("paragraph");
+	let borderR = document.getElementById("borderR").value;
+	let borderG = document.getElementById("borderG").value;
+	let borderB = document.getElementById("borderB").value;
+	let borderWidth = document.getElementById("borderWidth").value;
+	let backgroundR = document.getElementById("backgroundR").value;
+	let backgroundG = document.getElementById("backgroundG").value;
+	let backgroundB = document.getElementById("backgroundB").value;
+	paragraph.style.borderColor = `rgb(${borderR},${borderG},${borderB})`;
+	paragraph.style.borderWidth = borderWidth;
+	paragraph.style.backgroundColor = `rgb(${backgroundR},${backgroundG},${backgroundB})`;
+}
+</script>
+</body>
+
+</html>
